@@ -15,4 +15,4 @@ def rendu_glouton(arendre, solution=[], i=0):
         solution.append(p)
         return rendu_glouton(arendre - p, solution, i)
     else :
-        return rendu_glouton(arendre, solution, i+1)#doc si tps 
+        return rendu_glouton(arendre, solution, i+1)
