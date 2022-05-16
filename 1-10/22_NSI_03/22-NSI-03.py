@@ -1,3 +1,12 @@
+def delta(tab):
+    final = [tab[0]]
+    for i in range(1,len(tab)):
+        final.append(tab[i]-tab[i-1])
+    return final 
+
+#print(delta([1000, 800, 802, 1000, 1003]))
+
+
 class Noeud:
     def __init__(self, g, v, d):
         self.gauche = g
@@ -13,15 +22,14 @@ class Noeud:
 
 
 def expression_infixe(e):
-    s = ...
+    s = ''
     if e.gauche is not None:
-        s = s + expression_infixe(...)
-    s = s + ...
-    if ... is not None:
-        s = s + ...
-    if ...:
-        return s
+        s = s + expression_infixe(e.gauche)
+    s = s + str(e.valeur)
+    if e.droit is not None:
+        s = s + expression_infixe(e.droit) + ")" #sujet incorrect 
+    return s
     
-    return '('+ s +')'
+
 
 
