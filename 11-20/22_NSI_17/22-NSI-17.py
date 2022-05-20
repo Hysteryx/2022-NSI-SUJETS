@@ -1,3 +1,13 @@
+def nombre_de_mots(phrase):
+    nb_mots = 0 
+    for i in phrase:
+        if i == " !" or i == " ?" or i == "." or i == " ":
+            nb_mots += 1
+    return nb_mots
+
+print(nombre_de_mots('Il y a un seul espace entre les mots !'))
+
+
 class Noeud:
     '''
     Classe implémentant un noeud d'arbre binaire 
@@ -55,11 +65,11 @@ class ABR:
         binaire et False sinon.
 	 '''
         if self.est_vide():
-            return ...
+            return False
         else:
             if element < self.racine.valeur:
-                return ...
+                return self.racine.gauche.recherche(element)
             elif element > self.racine.valeur:
-                return ...
+                return self.racine.droite.recherche(element)
             else:
-                return ...
+                return True 
