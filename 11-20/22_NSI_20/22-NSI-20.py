@@ -1,3 +1,11 @@
+def xor(tab1, tab2):
+    if len(tab1) != len(tab2):
+        return "Erreur: Tableaux de taille différente !"
+    res = []
+    for i in range(len(tab1)):
+        res.append(tab1[i]^tab2[i])
+    return res 
+
 class Carre:
     def __init__(self, tableau = [[]]):
         self.ordre = len(tableau)
@@ -21,21 +29,21 @@ def est_magique(carre):
     s = carre.somme_ligne(0)
         
     #test de la somme de chaque ligne
-    for i in range(..., ...):
+    for i in range(1, n):
         if carre.somme_ligne(i) != s:
-            return ...
+            return False
         
     #test de la somme de chaque colonne
     for j in range(n):
-        if ... != s:
+        if carre.somme_col(j) != s: 
             return False
          
     #test de la somme de chaque diagonale
-    if sum([carre.valeurs[...][...] for k in range(n)]) != s:
+    if sum([carre.valeurs[k][k] for k in range(n)]) != s:
             return False
     if sum([carre.valeurs[k][n-1-k] for k in range(n)]) != s:
             return False
     
-    return ...   
+    return s   
 
 
