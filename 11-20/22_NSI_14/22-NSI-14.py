@@ -1,4 +1,4 @@
-def correspond(ch1, ch2):
+def correspond(ch1, ch2): #
     for i in range(len(ch2)):
         if ch2[i] != ch1[i]:
             if ch2[i] != "*":
