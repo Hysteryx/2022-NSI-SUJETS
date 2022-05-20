@@ -4,8 +4,6 @@ def recherche(tab,nb):
             return i 
     return -1
 
-print(recherche([], 55) )
-
 #ex2
 
 ALPHABET='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
@@ -13,14 +11,12 @@ ALPHABET='ABCDEFGHIJKLMNOPQRSTUVWXYZ'
 def position_alphabet(lettre):
     return ALPHABET.find(lettre)
 
-"""
 def cesar(message, decalage):
     resultat = ''
-    for ... in message :
+    for lettre in message :
         if lettre in ALPHABET :
-            indice = ( ... )%26
-            resultat = resultat + ALPHABET[indice]
+            indice = ( position_alphabet(lettre) + decalage )%26 #si la lettre est a décallée on lui prend sa position + le décallage 
+            resultat = resultat + ALPHABET[indice] #on lui met l'ancien texte + la nvelle lettre 
         else:
-            resultat = ...
+            resultat = resultat + lettre #sinon on lui met la lettre normal 
     return resultat
-"""
