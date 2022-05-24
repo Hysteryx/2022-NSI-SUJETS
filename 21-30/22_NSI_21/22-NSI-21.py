@@ -20,7 +20,7 @@ def dichotomie(tab, x):
     debut = 0 
     fin = len(tab) - 1
     while debut <= fin:
-        m = fin-debut 
+        m = (debut + fin) // 2 
         if x == tab[m]:
             return True
         if x > tab[m]:
